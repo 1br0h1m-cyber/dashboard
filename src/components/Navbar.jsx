@@ -16,15 +16,19 @@ import { navbarToggle, profileToggle, themeToggle, translateToggle } from "../re
 
 const Navbar = () => {
 
-  const { toggle, profile, theme, translate } = useSelector(state=>state.navbar)
+  const { toggle, profile, theme, translate } = useSelector(state => state.navbar)
   
   const dispatch = useDispatch()
 
   return (
-    <nav className='flex justify-between items-center p-3 bg-gray-50'>
-      <div className='flex justify-center items-center w-11 h-11 rounded-md hover:bg-gray-200 transition-[0.2s] cursor-pointer' onClick={()=>dispatch(navbarToggle(!toggle))}>
-        {toggle ? <FaBars size={23}/> : <IoClose size={32}/>}
+    <nav className={`flex justify-between items-center p-3 bg-gray-100 ${toggle ? '' : 'max-sm:justify-end'}`}>
+      <div className='flex items-center justify-center gap-2'>
+        <div className={`flex justify-center items-center w-11 h-11 rounded-md hover:bg-gray-200 transition-[0.2s] cursor-pointer ${toggle ? '' : 'max-sm:hidden'}`} onClick={()=>dispatch(navbarToggle(!toggle))}>
+          {toggle ? <FaBars size={23}/> : <IoClose size={32}/>}
+        </div>
+        {toggle ? <a href='/' className='text-blue-600 font-bold text-2xl cursor-pointer'>Admin Panel</a> : ''}
       </div>
+
       <div className='flex gap-2'>
         <div className='flex justify-center items-center w-11 h-11 rounded-md hover:bg-gray-200 transition-[0.2s] cursor-pointer' onClick={()=>dispatch(translateToggle(!translate))}>
           <MdOutlineTranslate size={29}/>
@@ -36,6 +40,7 @@ const Navbar = () => {
           <img src={logo} alt="" className='w-8'/>
         </div>
       </div>
+
     </nav>
   )
 }
