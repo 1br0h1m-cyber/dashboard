@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className={`flex justify-center items-center w-11 h-11 rounded-md hover:bg-gray-200 transition-[0.2s] cursor-pointer ${toggle ? '' : 'max-sm:hidden'}`} onClick={()=>dispatch(navbarToggle(!toggle))}>
           {toggle ? <FaBars size={23}/> : <IoClose size={32}/>}
         </div>
-        {toggle ? <a href='/' className='text-blue-600 font-bold text-2xl cursor-pointer'>Admin Panel</a> : ''}
+        {toggle ? <a href='/' className='text-blue-600 font-bold text-[23px] md:text-[25px] max-sm:hidden cursor-pointer'>Admin Panel</a> : ''}
       </div>
 
       <div className='flex gap-2'>

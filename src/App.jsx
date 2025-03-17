@@ -13,8 +13,6 @@ import Product from './pages/Product'
 import Sidebar from './components/Sidebar'
 import Navbar from './components/Navbar'
 
-import { motion } from 'framer-motion';
-
 const App = () => {
 
   const { toggle } = useSelector(state => state.navbar)
