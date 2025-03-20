@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 //icons
 import { FaHome } from "react-icons/fa";
-import { IoBagCheck } from "react-icons/io5";
+import { IoBagCheckSharp } from "react-icons/io5";
 import { FaUserFriends } from "react-icons/fa";
 
 const Sidebar = () => {
@@ -26,7 +26,7 @@ const Sidebar = () => {
           Home
         </Link>
         <Link to='/products' className={`flex items-center gap-1.5 font-semibold text-[20px] ${slug === '/products' ? 'bg-blue-100 border-r-4 border-solid border-blue-500' : 'text-gray-600 border-r-4 border-solid border-gray-100 hover:bg-gray-50 transition-[0.2s]'} w-full p-4 pl-6`}>
-          <IoBagCheck/>
+          <IoBagCheckSharp/>
           Products
         </Link>
         <Link to='/admins' className={`flex items-center gap-1.5 font-semibold text-[20px] ${slug === '/admins' ? 'bg-blue-100 border-r-4 border-solid border-blue-500' : 'text-gray-600 border-r-4 border-solid border-gray-100 hover:bg-gray-50 transition-[0.2s]'} w-full p-4 pl-6`}>

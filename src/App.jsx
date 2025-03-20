@@ -26,7 +26,7 @@ const App = () => {
         {!toggle && (<div className="fixed inset-0 bg-black/30 sm:hidden" onClick={()=>dispatch(navbarToggle(!toggle))}></div>)}
 
       {/* Sidebar */}
-        <div className={`bg-white max-sm:absolute transition-all duration-400 ${toggle ? "w-0 overflow-hidden" : "w-2/3 md:w-2/5"}`}>
+        <div className={`bg-white max-sm:absolute transition-all duration-400 ${toggle ? "w-0 overflow-hidden" : "w-2/3 sm:w-4/9 md:w-2/5 lg:w-1/4"}`}>
           {toggle && <Sidebar />}
           {!toggle && <Sidebar />}
         </div>
@@ -34,7 +34,7 @@ const App = () => {
       {/* Main content */}
         <div className={`transition-all duration-400 ${toggle ? "w-full" : "w-full sm:w-3/4 md:w-4/5"}`}>
           <Navbar />
-          <div className='bg-white w-full h-full'>
+          <div className='bg-gray-50 w-full h-full'>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/admins" element={<Admin />} />
