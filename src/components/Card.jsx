@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 //icons
 import { FaUserFriends } from 'react-icons/fa'
@@ -9,7 +9,7 @@ import { FaClock } from "react-icons/fa6";
 const Card = () => {
 
     return (
-        <div className='flex max-md:flex-col h-auto gap-3 py-3'>
+        <div className='flex flex-col md:grid md:grid-cols-2 lg:grid-cols-4 h-auto gap-3 py-3'>
 
             <div className='flex bg-white rounded-xl shadow-md gap-2 p-4 h-full w-full'>
                 <div className='bg-blue-500 text-white h-min w-min rounded-full m-1 p-2.5'>
