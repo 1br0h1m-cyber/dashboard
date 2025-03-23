@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { BiLogIn } from "react-icons/bi";
+import { IoLogInOutline } from "react-icons/io5";
 
 const Login = () => {
 
@@ -19,7 +19,7 @@ const Login = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="w-full max-w-md bg-white rounded-lg shadow-md p-8">
-        <h2 className="flex justify-center items-center gap-2 text-2xl font-bold text-center text-indigo-500 mb-4"><BiLogIn/> Login</h2>
+        <h2 className="flex justify-center items-center gap-1 text-2xl font-bold text-center text-indigo-500 mb-4"><IoLogInOutline size={30}/> Login</h2>
         <form onSubmit={handeClick}>
           <div className="mb-4">
             <label

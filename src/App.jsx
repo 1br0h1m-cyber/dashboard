@@ -23,18 +23,18 @@ const App = () => {
     <div>
       <main className='flex'>
 
-        {!toggle && (<div className="fixed inset-0 bg-black/30 sm:hidden" onClick={()=>dispatch(navbarToggle(!toggle))}></div>)}
+        {!toggle && (<div className="fixed inset-0 bg-black/30 z-10 sm:hidden" onClick={()=>dispatch(navbarToggle(!toggle))}></div>)}
 
       {/* Sidebar */}
-        <div className={`bg-white max-sm:absolute transition-all duration-400 ${toggle ? "w-0 overflow-hidden" : "w-2/3 sm:w-4/9 md:w-2/5 lg:w-1/4"}`}>
+        <div className={`bg-white max-sm:absolute transition-all duration-400 z-30 ${toggle ? "max-sm:-translate-x-full sm:w-0 overflow-hidden" : "w-2/3 sm:w-4/9 md:w-2/5 lg:w-1/4"}`}>
           {toggle && <Sidebar />}
           {!toggle && <Sidebar />}
         </div>
 
       {/* Main content */}
-        <div className={`transition-all duration-400 ${toggle ? "w-full" : "w-full sm:w-3/4 md:w-4/5"}`}>
+        <div className={`sm:z-50 right-0 w-full h-screen`}>
           <Navbar />
-          <div className='bg-gray-50 w-full h-full'>
+          <div className='bg-gray-50 w-full'>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/admins" element={<Admin />} />
