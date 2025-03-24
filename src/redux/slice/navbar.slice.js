@@ -6,6 +6,7 @@ export const navbarSlice = createSlice({
         toggle: false,
         profile: false,
         translate: false,
+        lang:false,
         theme: false
     },
     reducers: {
@@ -18,12 +19,15 @@ export const navbarSlice = createSlice({
         translateToggle: (state, action) => {
             state.translate = action.payload
         },        
+        language: (state, action) => {
+            state.lang = action.payload
+        },
         themeToggle: (state, action) => {
             state.theme = action.payload
         },
     },
 })
 
-export const { navbarToggle, profileToggle, themeToggle, translateToggle } = navbarSlice.actions
+export const { navbarToggle, profileToggle, themeToggle, translateToggle, language } = navbarSlice.actions
 
 export default navbarSlice.reducer

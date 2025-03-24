@@ -34,7 +34,7 @@ const App = () => {
       {/* Main content */}
         <div className={`sm:z-50 right-0 w-full h-screen`}>
           <Navbar />
-          <div className='bg-gray-50 w-full'>
+          <div className='bg-gray-50 w-full h-full'>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/admins" element={<Admin />} />

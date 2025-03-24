@@ -1,8 +1,5 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { navbarToggle } from "../redux/slice/navbar.slice";
-import { useDispatch, useSelector } from 'react-redux'
-
 //icons
 import { FaHome } from "react-icons/fa";
 import { IoBagCheckSharp } from "react-icons/io5";
@@ -11,9 +8,6 @@ import { FaUserFriends } from "react-icons/fa";
 const Sidebar = () => {
   
   const slug = useLocation().pathname
-
-  const { toggle } = useSelector(state => state.navbar)
-  const dispatch = useDispatch()
 
   return (
     <div className='h-[100vh]'>
