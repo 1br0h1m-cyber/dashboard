@@ -51,8 +51,7 @@ const Card = () => {
                 </div>
                 <div>
                     <h2 className='text-[16px] text-gray-400'>Today's date</h2>
-                    {/* <h1 className='font-bold'>{`${Months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`}</h1> */}
-                    <h1 className='font-bold'>{`${Months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`}</h1>
+                    <h1 className='font-bold'>{`${Months[time.getMonth()]} ${time.getDate()}, ${time.getFullYear()}`}</h1>
                 </div>
             </div>
 
