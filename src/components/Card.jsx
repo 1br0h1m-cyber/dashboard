@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 //icons
 import { FaUserFriends } from 'react-icons/fa'
@@ -7,6 +7,20 @@ import { IoBagSharp } from 'react-icons/io5'
 import { FaClock } from "react-icons/fa6";
 
 const Card = () => {
+
+    const Months = ['January','February','March','April','May','June','July','August','September','October','November','December']
+
+    const date = new Date()
+
+    const [time, setTime] = useState(new Date());
+
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setTime(new Date());
+      }, 1000);
+  
+      return () => clearInterval(interval);
+    }, []);
 
     return (
         <div className='flex flex-col md:grid md:grid-cols-2 lg:grid-cols-4 h-auto gap-3 py-3'>
@@ -37,7 +51,8 @@ const Card = () => {
                 </div>
                 <div>
                     <h2 className='text-[16px] text-gray-400'>Today's date</h2>
-                    <h1 className='font-bold'>time :)</h1>
+                    {/* <h1 className='font-bold'>{`${Months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`}</h1> */}
+                    <h1 className='font-bold'>{`${Months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`}</h1>
                 </div>
             </div>
 
@@ -47,7 +62,7 @@ const Card = () => {
                 </div>
                 <div>
                     <h2 className='text-[16px] text-gray-400'>Total Products</h2>
-                    <h1 className='font-bold'>time :)</h1>
+                    <h1 className='font-bold'>{time.toLocaleTimeString()}</h1>
                 </div>
             </div>
 
