@@ -31,10 +31,10 @@ const Home = () => {
         <h2 className='text-[20px]'>This is your central hub for managing your application. Use the navigation menu to access different sections.</h2>
       </div>
       <div className='flex flex-col md:grid md:grid-cols-2 lg:grid-cols-4 h-auto gap-3 py-3 w-full'>
-        <Card title={'Total Products'} desc={124} color={'blue-500'} icon={<IoBagSharp size={22} />}/>
-        <Card title={'Total Admins'} desc={8} color={'green-500'} icon={<FaUserFriends size={22} />}/>
-        <Card title={"Today's date"} desc={day} color={'orange-400'} icon={<FaCalendarDay size={22} />}/>
-        <Card title={'Current time'} desc={time.toLocaleTimeString()} color={'violet-500'} icon={<FaClock size={22} />}/>
+        <Card title={'Total Products'} desc={124} bgcolor={'bg-blue-500'} icon={<IoBagSharp size={22} />}/>
+        <Card title={'Total Admins'} desc={8} bgcolor={'bg-green-500'} icon={<FaUserFriends size={22} />}/>
+        <Card title={"Today's date"} desc={day} bgcolor={'bg-orange-400'} icon={<FaCalendarDay size={22} />}/>
+        <Card title={'Current time'} desc={time.toLocaleTimeString()} bgcolor={'violet-500'} icon={<FaClock size={22} />}/>
       </div>
     </div>
   )

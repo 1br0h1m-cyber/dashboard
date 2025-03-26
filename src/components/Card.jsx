@@ -6,7 +6,7 @@ import { FaCalendarDay } from "react-icons/fa6";
 import { IoBagSharp } from 'react-icons/io5'
 import { FaClock } from "react-icons/fa6";
 
-const Card = ({title, desc, icon, color,}) => {
+const Card = ({title, desc, icon, bgcolor}) => {
 
     const Months = ['January','February','March','April','May','June','July','August','September','October','November','December']
 
@@ -24,7 +24,7 @@ const Card = ({title, desc, icon, color,}) => {
 
     return (
         <div className='flex bg-white rounded-xl shadow-md gap-2 p-4 h-full w-full'>
-            <div className={`bg-${color} text-white h-min w-min rounded-full m-1 p-2.5`}>
+            <div className={`${bgcolor} text-white h-min w-min rounded-full m-1 p-2.5`}>
                 {icon}
             </div>
             <div>
