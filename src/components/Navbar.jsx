@@ -48,11 +48,11 @@ const Navbar = () => {
       {translate ? 
         <div className={`bg-white border border-gray-300 rounded-lg shadow-md absolute top-18.5 ${profile ? 'right-53' : 'right-30'} p-1`}>
           <div className={`flex items-center text-[15px] ${lang ? 'text-blue-600 hover:text-blue-700' : 'text-gray-400 hover:text-gray-500'} font-semibold cursor-pointer gap-1 p-0.5`} onClick={()=> !lang && dispatch(language(true))}>
-            <img src={eng} className='h-3.5 w-5' alt="eng" /><h3>English</h3>
+            <img src={eng} className={`h-3.5 w-5 ${lang ? '' : 'grayscale-75'}`} alt="eng" /><h3>English</h3>
           </div>
           <hr className='mt-0.5 border-gray-300'/>
           <div className={`flex items-center text-[15px] ${lang ? 'text-gray-400 hover:text-gray-500' : 'text-blue-600 hover:text-blue-700'} font-semibold cursor-pointer gap-1 p-0.5`} onClick={()=> lang && dispatch(language(false))}>
-            <img src={rus} className='h-3.5 w-5' alt="rus" /><h3>Russian</h3>
+            <img src={rus} className={`h-3.5 w-5 ${lang ? 'grayscale-50' : ''}`} alt="rus" /><h3>Russian</h3>
           </div>
         </div> 
       : ''}

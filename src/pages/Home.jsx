@@ -27,7 +27,7 @@ const Home = () => {
   return (
     <div className='p-4'>
       <div className='shadow-md p-4 rounded-xl bg-white'>
-        <h1 className='font-bold text-2xl'>Welcome to the Admin Dashboard</h1>
+        <h1 className='font-bold text-2xl pb-1'>Welcome to the Admin Dashboard</h1>
         <h2 className='text-[20px]'>This is your central hub for managing your application. Use the navigation menu to access different sections.</h2>
       </div>
       <div className='flex flex-col md:grid md:grid-cols-2 lg:grid-cols-4 h-auto gap-3 py-3 w-full'>
