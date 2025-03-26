@@ -34,7 +34,7 @@ const Home = () => {
         <Card title={'Total Products'} desc={124} bgcolor={'bg-blue-500'} icon={<IoBagSharp size={22} />}/>
         <Card title={'Total Admins'} desc={8} bgcolor={'bg-green-500'} icon={<FaUserFriends size={22} />}/>
         <Card title={"Today's date"} desc={day} bgcolor={'bg-orange-400'} icon={<FaCalendarDay size={22} />}/>
-        <Card title={'Current time'} desc={time.toLocaleTimeString()} bgcolor={'violet-500'} icon={<FaClock size={22} />}/>
+        <Card title={'Current time'} desc={time.toLocaleTimeString()} bgcolor={'bg-violet-500'} icon={<FaClock size={22} />}/>
       </div>
     </div>
   )
